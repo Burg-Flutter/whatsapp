@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'intro_page.dart';
-import 'Omkar.dart';
+
 
 void main() {
   runApp(const MainApp());
