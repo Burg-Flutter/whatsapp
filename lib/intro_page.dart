@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/call_page.dart';
 import 'package:whatsapp/chats/Omkar.dart';
 import 'package:whatsapp/chats/Panya.dart';
+import 'package:whatsapp/status_page.dart';
 import 'chats/Bhushan.dart';
 import 'chats/Atharva.dart';
 import 'chats/Niranjan.dart';
@@ -18,6 +20,7 @@ class intro_page extends StatefulWidget {
 }
 
 class _intro_page_State extends State<intro_page> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -70,7 +73,7 @@ class _intro_page_State extends State<intro_page> {
               Container(
                 height: 50,
                 width: double.infinity,
-                color: const Color.fromRGBO(7, 94, 83, 10),
+                color: Color.fromRGBO(7, 94, 83, 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -82,29 +85,53 @@ class _intro_page_State extends State<intro_page> {
                     const SizedBox(
                       width: 30,
                     ),
-                    const Text(
-                      'Chats',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const intro_page()));
+                      },
+                      child: const Text(
+                        'Chats',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15),
+                      ),
                     ),
                     const SizedBox(width: 70),
-                    const Text(
-                      'Updates',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const status_page()));
+                      },
+                      child: const Text(
+                        'Status',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15),
+                      ),
                     ),
                     const SizedBox(width: 70),
-                    const Text(
-                      'Calls',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15),
-                    )
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const call_page()));
+                      },
+                      child: const Text(
+                        'Calls',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -123,7 +150,7 @@ class _intro_page_State extends State<intro_page> {
                     child: Container(
                       height: 60,
                       width: 411,
-                      color: Color.fromARGB(255, 251, 251, 251),
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -564,7 +591,7 @@ class _intro_page_State extends State<intro_page> {
                     child: Container(
                       height: 60,
                       width: 411,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -613,7 +640,7 @@ class _intro_page_State extends State<intro_page> {
                     child: Container(
                       height: 60,
                       width: 411,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

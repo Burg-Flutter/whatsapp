@@ -15,15 +15,14 @@ class _Uday_State extends State<Uday> {
       home: Scaffold(
         // bottomNavigationBar: NavigationBar(destinations:List<Widget> =[]),
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back),
+            color: Colors.white,
+          ),
           actions: [
-            ElevatedButton.icon(
-              label: const Text(""),
-              icon: const Icon(Icons.arrow_back),
-              autofocus: true,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
             const SizedBox(width: 10),
             IconButton(
               onPressed: () {},

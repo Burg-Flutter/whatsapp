@@ -16,16 +16,14 @@ class _Panya_State extends State<Panya> {
       home: Scaffold(
         // bottomNavigationBar: NavigationBar(destinations:List<Widget> =[]),
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back),
+            color: Colors.white,
+          ),
           actions: [
-            ElevatedButton.icon(
-              label: const Text(""),
-              icon: const Icon(Icons.arrow_back),
-              autofocus: true,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-            const SizedBox(width: 10),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.call),
@@ -64,80 +62,12 @@ class _Panya_State extends State<Panya> {
         ),
         body: Row(
           children: [
-            // Container(
-            //   height: 900,
-            //   width: double.infinity,
-            //   color: const Color.fromARGB(255, 241, 229, 190),
-            //   alignment: Alignment.centerLeft,
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.center,
-            //     children: [
-            //       Column(
-            //         children: [
-            //           Column(
-            //             crossAxisAlignment: CrossAxisAlignment.start,
-            //             children: [
-            //               const SizedBox(height: 20),
-            //               Container(
-            //                 height: 30,
-            //                 width: 60,
-            //                 decoration: BoxDecoration(
-            //                     shape: BoxShape.rectangle,
-            //                     color: const Color.fromARGB(255, 255, 255, 255),
-            //                     borderRadius: BorderRadius.circular(40)),
-            //                 child: const Text(
-            //                   'Hii ',
-            //                   textAlign: TextAlign.center,
-            //                   style: TextStyle(
-            //                     fontSize: 20,
-            //                     fontWeight: FontWeight.w600,
-            //                   ),
-            //                 ),
-            //               ),
-            //             ],
-            //           ),
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // Container(
-            //   height: 900,
-            //   width: double.infinity,
-            //   color: const Color.fromARGB(255, 241, 229, 190),
-            //   alignment: Alignment.centerRight,
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.center,
-            //     children: [
-            //       Column(
-            //         children: [
-            //           Column(
-            //             crossAxisAlignment: CrossAxisAlignment.start,
-            //             children: [
-            //               const SizedBox(height: 50),
-            //               Container(
-            //                 height: 30,
-            //                 width: 60,
-            //                 decoration: BoxDecoration(
-            //                     shape: BoxShape.rectangle,
-            //                     color: const Color.fromARGB(255, 255, 255, 255),
-            //                     borderRadius: BorderRadius.circular(40)),
-            //                 child: const Text(
-            //                   'Hii',
-            //                   textAlign: TextAlign.center,
-            //                   style: TextStyle(
-            //                     fontSize: 20,
-            //                     fontWeight: FontWeight.w600,
-            //                   ),
-            //                 ),
-            //               ),
-            //             ],
-            //           ),
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // ),
+            Container(
+              height: 900,
+              width: 411,
+              color: const Color.fromARGB(255, 241, 229, 190),
+              alignment: Alignment.centerRight,
+            ),
           ],
         ),
       ),
